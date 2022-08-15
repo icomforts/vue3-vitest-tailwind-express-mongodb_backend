@@ -19,4 +19,8 @@ const upload = multer({ storage: storage });
 router.post('/register', upload.single('avatar'), createUser);
 //user login with email and password
 router.post('/login', loginUser);
+//test
+router.get('/test', (req, res) => {
+    res.send('test');
+});
 export default router;
